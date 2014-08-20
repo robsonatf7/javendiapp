@@ -1,0 +1,35 @@
+<resources>
+
+    <style name="Theme.Javendi" parent="@style/Theme.AppCompat.Light">
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_javendi</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Javendi</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Javendi</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Javendi</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Javendi</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.Javendi</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_javendi</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_javendi</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Javendi</item>
+        
+        
+    </style>
+
+    <style name="ActionBar.Solid.Javendi" parent="@style/Widget.AppCompat.Light.ActionBar.Solid">
+        <item name="android:background">@drawable/ab_solid_javendi</item>
+        <item name="android:backgroundStacked">@drawable/ab_stacked_solid_javendi</item>
+        <item name="android:backgroundSplit">@drawable/ab_bottom_solid_javendi</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Javendi</item>
+    </style>
+
+    <style name="ActionBar.Transparent.Javendi" parent="@style/Widget.AppCompat.Light.ActionBar">
+        <item name="android:background">@drawable/ab_transparent_javendi</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Javendi</item>
+    </style>
+    
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme.Javendi.Widget" parent="@style/Theme.AppCompat">
+        <item name="android:popupMenuStyle">@style/PopupMenu.Javendi</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Javendi</item>
+    </style>
+
+</resources>

@@ -27,7 +27,7 @@ public class NewAdActivity extends SharedCode {
 	
 	Button createAd;
 	Context context;
-	String feedUrl = "http://192.168.1.15:3000/categories.json";
+	String feedUrl = URLS.SERVER_URL + "/categories.json";
 	ArrayList<SpinnerCategory> spinnerCategories = new ArrayList<SpinnerCategory>();
 	ArrayList<String> spinnerCategoryNames = new ArrayList<String>();
 	ArrayList<Integer> spinnerCategoryIds = new ArrayList<Integer>();

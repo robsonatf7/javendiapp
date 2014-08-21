@@ -148,7 +148,7 @@ public class AddPhotoActivity extends SharedCode {
 			
 			String result = "";
 			HttpClient httpClient = new DefaultHttpClient();
-			HttpPost httpPostRequest = new HttpPost("http://192.168.0.11:3000/ads");
+			HttpPost httpPostRequest = new HttpPost(URLS.SERVER_URL + "/ads");
 			try {
 
 				Intent i = getIntent();

@@ -38,7 +38,7 @@ public class CategoryListActivity extends SharedCode {
 		CategoryListAdapter categoryListAdapter;
 		JSONArray categoriesJson = new JSONArray();
 		Context context;
-		String feedUrl = "http://192.168.1.15:3000/categories.json";
+		String feedUrl = URLS.SERVER_URL + "/categories.json";
 		
 		@Override
 		public void onCreate(Bundle savedInstanceState) {
@@ -94,7 +94,7 @@ public class CategoryListActivity extends SharedCode {
 				
 				for (int i = 0; i < imageUrls.size(); i++) {
 					
-					String imgUrl = "http://192.168.1.15:3000" + imageUrls.get(i);
+					String imgUrl = URLS.SERVER_URL + imageUrls.get(i);
 					
 					try {
 				        URL url = new URL(imgUrl);

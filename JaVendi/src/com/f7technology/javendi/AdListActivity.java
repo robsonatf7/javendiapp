@@ -64,17 +64,17 @@ public class AdListActivity extends SharedCode {
 		      String query = intent.getStringExtra(SearchManager.QUERY);
 		      setTitle("Resultados para '" +query+"'");
 		      String query1 = query.replaceAll("\\s", "%20");
-		      feedUrl = "http://192.168.1.15:3000/ads.json?search="+ query1;
+		      feedUrl = URLS.SERVER_URL + "/ads.json?search="+ query1;
 		    } else {
 		    	if (intent.getStringExtra("categoryName") != null) {
 					String catName = intent.getStringExtra("categoryName");
 					setTitle(catName);
 					String catName1 = catName.replaceAll("\\s", "%20");
-					feedUrl = "http://192.168.1.15:3000/ads.json?category_name="+ catName1;
+					feedUrl = URLS.SERVER_URL + "/ads.json?category_name="+ catName1;
 				} else {
 					String userEmail = intent.getStringExtra("userEmail");
 					setTitle("My ads");
-					feedUrl = "http://192.168.1.15:3000/ads.json?user_email="+ userEmail;
+					feedUrl = URLS.SERVER_URL + "/ads.json?user_email="+ userEmail;
 				}
 		    }
 		
@@ -95,7 +95,7 @@ public class AdListActivity extends SharedCode {
 			Intent y = getIntent();
 			catName = y.getStringExtra("categoryName");
 			String catUrl = catName.replaceAll("\\s", "%20");
-			String feedUrl = "http://192.168.1.15:3000/ads.json?category_name="+ catUrl;
+			String feedUrl = URLS.SERVER_URL + "/ads.json?category_name="+ catUrl;
 			
 			int adId = adsIdsArray.get(position);
 			
@@ -156,7 +156,7 @@ public class AdListActivity extends SharedCode {
 			
 			for (int i = 0; i < imageUrls.size(); i++) {
 				
-				String imgUrl = "http://192.168.1.15:3000" + imageUrls.get(i);
+				String imgUrl = URLS.SERVER_URL + imageUrls.get(i);
 				
 				try {
 			        URL url = new URL(imgUrl);

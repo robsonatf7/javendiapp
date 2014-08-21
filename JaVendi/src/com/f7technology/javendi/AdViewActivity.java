@@ -126,7 +126,7 @@ public class AdViewActivity extends SharedCode implements AsyncResponse {
 			adId = extras.getInt("adId");
 			
 			AdModel jParser = new AdModel();
-			JSONObject jsonObj = jParser.getJSONObjFromUrl("http://192.168.1.15:3000/ads/"+ String.valueOf(adId) +".json");
+			JSONObject jsonObj = jParser.getJSONObjFromUrl(URLS.SERVER_URL + "/ads/"+ String.valueOf(adId) +".json");
 			
 			try {
 				JSONObject ad = jsonObj;
@@ -139,7 +139,7 @@ public class AdViewActivity extends SharedCode implements AsyncResponse {
 				ex.printStackTrace();
 			}
 
-			final String imageURL = "http://192.168.1.15:3000" + image;
+			final String imageURL = URLS.SERVER_URL + image;
 			try {
 		        URL url = new URL(imageURL);
 		        HttpGet httpRequest = null;

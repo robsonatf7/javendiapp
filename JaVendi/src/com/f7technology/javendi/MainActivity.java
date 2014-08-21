@@ -75,7 +75,7 @@ public class MainActivity extends SharedCode {
 //			Intent y = getIntent();
 //			catName = y.getStringExtra("categoryName");
 //			String catUrl = catName.replaceAll("\\s", "%20");
-//			String feedUrl = "http://192.168.0.11:3000/ads.json?category_name="+ catUrl;
+//			String feedUrl = URLS.SERVER_URL + "/ads.json?category_name="+ catUrl;
 //			
 //			Intent intent = new Intent(context, AdViewActivity.class);
 //			Bundle extras = new Bundle();
@@ -95,8 +95,8 @@ public class MainActivity extends SharedCode {
 		ArrayList<String> adsTitlesArray = new ArrayList<String>();
 		ArrayList<Bitmap> adsBitmapsArray = new ArrayList<Bitmap>();
 		ArrayList<String> imageUrls = new ArrayList<String>();
-		String adsUrl = "http://192.168.1.15:3000/ads.json";
-		String catsUrl = "http://192.168.1.15:3000/categories.json";
+		String adsUrl = URLS.SERVER_URL + "/ads.json";
+		String catsUrl = URLS.SERVER_URL + "/categories.json";
 		
 		@Override
 		protected void onPreExecute() {
@@ -147,7 +147,7 @@ public class MainActivity extends SharedCode {
 			
 			for (int i = 0; i < imageUrls.size(); i++) {
 				
-				String imgUrl = "http://192.168.1.15:3000" + imageUrls.get(i);
+				String imgUrl = URLS.SERVER_URL + imageUrls.get(i);
 				
 				try {
 			        URL url = new URL(imgUrl);
